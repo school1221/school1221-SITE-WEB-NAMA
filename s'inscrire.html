@@ -1,0 +1,277 @@
+  <!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S’inscrire | Nam Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0; padding: 0;
+        background: #f4f6f9;
+        color: #333;
+      }
+/* ==== HEADER & NAVIGATION ==== */
+header {
+    background: #2c3e50;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+header .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+}
+
+header .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+header .nav-links a:hover,
+header .nav-links a.active-link {
+    background: #e67e22;
+    color: #fff;
+}
+
+/* Icônes des réseaux sociaux */
+header .social-link a {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
+
+header .social-link a:hover {
+    color: #e67e22;
+}
+
+/* Responsive */
+@media (max-width:768px){
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header .nav-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+      .page-header {
+        text-align: center;
+        padding: 30px 20px;
+        background: #ecf0f1;
+      }
+      .page-header h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      .form-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 40px 10%;
+      }
+      .form-info {
+        flex: 1;
+        min-width: 280px;
+      }
+      .form-info h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        color: #2c3e50;
+      }
+      .form-info p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+      .form-info i {
+        color: #e67e22;
+        margin-right: 8px;
+      }
+      .formulaire {
+        flex: 1;
+        min-width: 300px;
+        background: #fff;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      }
+      .formulaire label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      .formulaire input,
+      .formulaire select,
+      .formulaire textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .radio-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 5px;
+      }
+      .formulaire button {
+        margin-top: 20px;
+        padding: 12px;
+        background: #e67e22;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+      }
+      .formulaire button:hover {
+        background: #d35400;
+      }
+    </style>
+  </head>
+  <body>
+
+<header>
+
+
+  <ul class="nav-links">
+    <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+    <li><a href="actualites.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+    <li><a href="bibliotheque.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
+    <li><a href="notre ecole.html"><i class="fas fa-landmark"></i> Notre école</a></li>
+    <li><a href="nous contacter.html"><i class="fas fa-envelope"></i> Nous contacter</a></li>
+    <li><a href="nous decouvrir.html"><i class="fas fa-users"></i> Nous découvrir</a></li>
+    <li><a href="s'inscrire.html" class="active-link"><i class="fas fa-user-plus"></i> S’inscrire</a></li>
+  </ul>
+
+</header>
+
+
+    <!-- Titre -->
+    <section class="page-header">
+      <h1><i class="fas fa-user-plus"></i> S’inscrire à Nama Academy</h1>
+      <p>Remplissez le formulaire pour inscrire votre enfant et rejoindre notre grande famille éducative.</p>
+    </section>
+
+    <!-- Section inscription -->
+    <section class="form-section">
+      <!-- Texte d’introduction -->
+      <div class="form-info">
+        <h2><i class="fas fa-info-circle"></i> Pourquoi s’inscrire ?</h2>
+        <p><i class="fas fa-check-circle"></i> Un enseignement bilingue de qualité adapté aux besoins de chaque élève.</p>
+        <p><i class="fas fa-check-circle"></i> Un encadrement rigoureux et personnalisé.</p>
+        <p><i class="fas fa-check-circle"></i> Une ouverture sur le monde avec des valeurs citoyennes.</p>
+      </div>
+
+      <!-- Formulaire -->
+      <form action="#" method="post" class="formulaire">
+        <label for="parent"><i class="fas fa-user"></i> Nom du parent</label>
+        <input type="text" id="parent" name="parent" required>
+
+        <label for="eleve"><i class="fas fa-child"></i> Nom de l’élève</label>
+        <input type="text" id="eleve" name="eleve" required>
+
+        <label for="classe"><i class="fas fa-school"></i> Classe sollicitée</label>
+        <select id="classe" name="classe" required>
+          <option value="">-- Sélectionnez une classe --</option>
+          <option value="maternelle">Maternelle</option>
+          <option value="cp-cl2">CP/CL2</option>
+          <option value="ce1-cl3">CE1/CL3</option>
+          <option value="ce2-cl4">CE2/CL4</option>
+          <option value="cm1-cl5">CM1/CL5</option>
+          <option value="cm2-cl6">CM2/CL6</option>
+        </select>
+
+        <label for="section"><i class="fas fa-language"></i> section</label>
+        <select id="section" name="section" required>
+          <option value="">-- Sélectionnez --</option>
+          <option value="fr">francophone</option>
+          <option value="an">anglophone</option>
+        </select>
+
+        <label for="age"><i class="fas fa-birthday-cake"></i> Âge de l’élève</label>
+        <input type="number" id="age" name="age" min="2" max="20" required>
+
+        <label><i class="fas fa-venus-mars"></i> Sexe de l’élève</label>
+        <div class="radio-group">
+          <label><input type="radio" name="sexe" value="masculin" required> Masculin</label>
+          <label><input type="radio" name="sexe" value="feminin"> Féminin</label>
+        </div>
+
+        <label for="quartier"><i class="fas fa-map-marker-alt"></i> Quartier</label>
+        <input type="text" id="quartier" name="quartier">
+
+        <label for="contact"><i class="fas fa-phone"></i> Contact du parent</label>
+        <input type="text" id="contact" name="contact" required>
+
+        <label for="info"><i class="fas fa-comment-dots"></i> Informations supplémentaires</label>
+        <textarea id="info" name="info" rows="5"></textarea>
+
+        <button type="submit"><i class="fas fa-paper-plane"></i> Envoyer l’inscription</button>
+      </form>
+    </section>
+    <!-- Footer -->
+  <footer style="background:#2c3e50; color:#fff; padding:40px 20px; display:flex; flex-wrap:wrap; justify-content:space-around; gap:30px;">
+    <!-- Logo -->
+    <div class="logo-footer">
+      <img src="/images/logo-nama.png" alt="logo-école" style="height:60px;">
+    </div>
+
+    <!-- Menu du site -->
+    <div class="lien-footer">
+      <h1 style="font-size:1.2rem; margin-bottom:10px;">Menu du site</h1>
+      <a href="index.html" style="color:#fff; display:block; margin-bottom:5px;">Accueil</a>
+      <a href="actualites.html" style="color:#fff; display:block; margin-bottom:5px;">Actualités</a>
+      <a href="bibliotheque.html" style="color:#fff; display:block; margin-bottom:5px;">Bibliothèque</a>
+      <a href="notre ecole.html" style="color:#fff; display:block; margin-bottom:5px;">Notre école</a>
+      <a href="nous contacter.html" style="color:#fff; display:block; margin-bottom:5px;">Nous contacter</a>
+      <a href="nous decouvrir.html" style="color:#fff; display:block; margin-bottom:5px;">Nous découvrir</a>
+      <a href="s'inscrire.html" style="color:#fff; display:block; margin-bottom:5px;">S’inscrire</a>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-footer">
+      <h1 style="font-size:1.2rem; margin-bottom:10px;">Contact</h1>
+      <p style="font-size:0.9rem;"><i class="fas fa-map-marker-alt"></i> Nsimalen, Yaoundé, Cameroun</p>
+      <p style="font-size:0.9rem;"><i class="fas fa-phone-alt"></i> +237 671122164</p>
+      <p style="font-size:0.9rem;"><i class="fas fa-envelope"></i> namabilingualschool@gmail.com</p>
+      <div>
+        <a href="https://www.facebook.com/profile.php?id=61573814661030" style="color:#fff; font-size:0.9rem; display:block; margin-top:5px;">
+          <i class="fab fa-facebook fa-lg"></i> Rejoignez-nous sur Facebook
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  </body>
+  </html>

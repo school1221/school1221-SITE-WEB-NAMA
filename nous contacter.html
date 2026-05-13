@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nous contacter - NAMA Bilingual School</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary-blue: #002147;
+  --secondary-blue: #1470b7;
+  --accent-red: #d90429;
+  --light-bg: #f2f6ff;
+  --white: #ffffff;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --transition: all 0.3s ease;
+  --shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Open Sans',sans-serif; }
+body { background: var(--light-bg); color: var(--text-dark); line-height: 1.6; }
+a { text-decoration:none; color:inherit; }
+
+/* Header & Navigation */
+header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+}
+
+header .logo img {
+    margin-right: 10px;
+    height: 60px;
+}
+
+header .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+}
+
+header .nav-links a:hover,
+header .nav-links a.active-link {
+    font-weight: 600;
+}
+
+header .nav-links a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--white);
+    transition: var(--transition);
+}
+
+header .nav-links a:hover:after,
+header .nav-links a.active-link:after {
+    width: 100%;
+}
+
+header .social-link {
+    display: flex;
+    align-items: center;
+}
+
+header .social-link a {
+    color: var(--white);
+    margin-left: 15px;
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+header .social-link a:hover {
+    color: var(--accent-red);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    header .nav-links a {
+        margin: 5px 10px;
+    }
+}
+
+
+main.container { max-width:1200px; margin:auto; padding:30px 20px; }
+main h1 { font-family:'Montserrat',sans-serif; color: var(--primary-blue); margin-bottom:15px; text-align:center;}
+main p { text-align:center; margin-bottom:30px; color: var(--text-dark);}
+
+.contact-form-container {
+  display:flex;
+  flex-wrap:wrap;
+  gap:40px;
+  justify-content:space-between;
+  margin-bottom:60px;
+}
+.contact-info {
+  flex:1 1 450px;
+  min-width:300px;
+  background: var(--white);
+  padding:30px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+.contact-info h2 { color: var(--primary-blue); margin-bottom:15px; display:flex; align-items:center; gap:10px;}
+.contact-info p, .contact-info li { margin-bottom:12px; font-size:1rem; line-height:1.4; }
+.contact-info .local, .contact-info .email, .contact-info .phone, .contact-info .hours {
+  display:flex; align-items:center; gap:10px; margin-bottom:12px;
+}
+
+.contact-form {
+  flex:1 1 450px;
+  min-width:300px;
+  background: var(--white);
+  padding:30px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+.contact-form h2 { margin-bottom:20px; color: var(--primary-blue);}
+.contact-form form label { display:block; margin-top:15px; font-weight:600;}
+.contact-form form input, .contact-form form textarea {
+  width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:6px; font-size:1rem;
+}
+.contact-form form button {
+  margin-top:20px; background: var(--secondary-blue); color: var(--white); border:none; padding:12px 25px;
+  border-radius:6px; cursor:pointer; transition:var(--transition); font-weight:600;
+}
+.contact-form form button:hover { background: var(--accent-red);}
+
+footer {
+  background: var(--primary-blue);
+  color: var(--white);
+  padding: 50px 20px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col h3, .footer-col h4 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 8px 0;
+  color: #ccc;
+}
+
+.footer-col i {
+  margin-right: 8px;
+  color: #1470b7;
+}
+
+.socials a {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 18px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #1470b7;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+
+@media(max-width:768px){
+  .contact-form-container { flex-direction:column; align-items:center; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+      <li><a href="notre ecole.html"><i class="fas fa-landmark"></i> Notre école</a></li>
+      <li><a href="nous decouvrir.html" class="active-link"><i class="fas fa-users"></i> Nous découvrir</a></li>
+      <li><a href="actualites.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+      <li><a href="bibliothèque.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
+      <li><a href="s'inscrire.html"><i class="fas fa-user-plus"></i> S'inscrire</a></li>
+      <li><a href="nous contacter.html"><i class="fas fa-envelope"></i> Nous contacter</a></li>
+    </ul>
+
+  </div>
+</header>
+
+
+
+<main class="container">
+<h1>Nous contacter</h1>
+<p>Si vous avez des questions, vous pouvez venir visiter notre établissement ou nous contacter par e-mail ou téléphone.</p>
+
+<div class="contact-form-container">
+  <!-- Informations -->
+  <div class="contact-info">
+    <h2><i class="fas fa-school"></i> Visiter l'école</h2>
+    <p>Visite guidée de l'établissement</p>
+
+    <h2><i class="fas fa-map-marker-alt"></i> Adresse</h2>
+    <div class="local">
+      <p>Nsimalen, Yaoundé, Cameroun</p>
+    </div>
+
+    <h2><i class="fas fa-envelope"></i> Email</h2>
+    <div class="email">
+      <p>namabilingualschool@gmail.com</p>
+    </div>
+
+    <h2><i class="fas fa-phone-alt"></i> Téléphone</h2>
+    <div class="phone">
+      <p>+237 671122164</p>
+    </div>
+
+    <h2><i class="fas fa-clock"></i> Horaires</h2>
+    <div class="hours">
+      <p>Lu-Ve: 07h00 - 17h00</p>
+      <p>Sa: 08h00 - 12h00</p>
+      <p>Di: Fermé</p>
+    </div>
+  </div>
+
+  <!-- Formulaire -->
+  <div class="contact-form">
+    <h2>Contactez-nous</h2>
+    <form action="">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" placeholder="Entrez votre nom">
+
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" placeholder="Entrez votre prénom">
+
+      <label for="email">Email</label>
+      <input type="email" placeholder="Entrez votre adresse email">
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Votre message"></textarea>
+
+      <button>Soumettre</button>
+    </form>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="footer-container">
+    <!-- À propos de l'école -->
+    <div class="footer-col">
+      <h3><i class="fas fa-school"></i> NAMA Bilingual School</h3>
+      <p>
+        Une école moderne à Yaoundé-Nsimalen, alliant rigueur académique et développement personnel pour former des citoyens responsables et épanouis.
+      </p>
+    </div>
+
+    <!-- Liens rapides -->
+    <div class="footer-col">
+      <h4><i class="fas fa-link"></i> Liens rapides</h4>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+        <li><a href="notre ecole.html"><i class="fas fa-landmark"></i> Notre école</a></li>
+        <li><a href="actualites.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+        <li><a href="bibliotheque.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
+        <li><a href="s'inscrire.html"><i class="fas fa-user-plus"></i> S’inscrire</a></li>
+        <li><a href="nous contacter.html"><i class="fas fa-envelope"></i> Nous contacter</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4><i class="fas fa-phone"></i> Contact</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Nsimalen, Yaoundé, Cameroun</p>
+      <p><i class="fas fa-phone-alt"></i> +237 671122164</p>
+      <p><i class="fas fa-envelope"></i> namabilingualschool@gmail.com</p>
+    </div>
+
+    <!-- Réseaux sociaux -->
+    <div class="footer-col">
+      <h4><i class="fas fa-users"></i> Suivez-nous</h4>
+      <div class="socials">
+        <a href="https://www.facebook.com/profile.php?id=61573814661030"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 NAMA Bilingual School - Tous droits réservés</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
