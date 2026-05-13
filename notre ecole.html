@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notre École - NAMA Bilingual School</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-blue: #002147;
+      --secondary-blue: #1470b7;
+      --accent-red: #d90429;
+      --light-bg: #f2f6ff;
+      --white: #ffffff;
+      --text-dark: #333333;
+      --text-light: #666666;
+      --transition: all 0.3s ease;
+      --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Open Sans', sans-serif; }
+    body { background: var(--light-bg); color: var(--text-dark); line-height:1.6; }
+
+    /* ===== HEADER / NAVBAR ===== */
+    header { background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%); padding:15px 0; position:sticky; top:0; z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+    .navbar { display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:auto; padding:0 20px; }
+    .logo { display:flex; align-items:center; gap:10px; font-weight:700; font-family:'Montserrat', sans-serif; font-size:1.5rem; color:var(--white); text-decoration:none; }
+    .logo i { font-size:1.8rem; }
+    .nav-links { display:flex; list-style:none; gap:25px; }
+    .nav-links li a { color:var(--white); text-decoration:none; font-weight:500; font-size:1rem; padding:8px 5px; position:relative; transition:var(--transition); }
+    .nav-links li a:after { content:''; position:absolute; width:0; height:2px; bottom:0; left:0; background-color:var(--white); transition:var(--transition); }
+    .nav-links li a:hover:after, .nav-links li a.active-link:after { width:100%; }
+    .nav-links li a.active-link { font-weight:600; }
+    .menu-icon { display:none; font-size:26px; cursor:pointer; color:var(--white); }
+
+    @media (max-width:768px) {
+      .nav-links { position:absolute; top:70px; left:0; right:0; background:var(--primary-blue); flex-direction:column; display:none; text-align:center; padding:15px 0; }
+      .nav-links.show { display:flex; }
+      .menu-icon { display:block; }
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    main.container { max-width:1200px; margin:auto; padding:30px 20px; }
+    section { display:flex; flex-wrap:wrap; align-items:center; margin-bottom:60px; gap:20px; }
+    section.alt { flex-direction:row-reverse; }
+    .text { flex:1 1 400px; }
+    .text h2 { color:var(--primary-blue); font-family:'Montserrat', sans-serif; margin-bottom:15px; }
+    .text p, .text ul { margin-bottom:10px; font-size:1rem; color:var(--text-dark); }
+    .text ul li { margin-bottom:5px; }
+    .image { flex:1 1 400px; text-align:center; }
+    .image img { width:100%; max-width:500px; border-radius:12px; box-shadow:var(--shadow); }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--primary-blue); color:var(--white); padding:50px 20px 20px; margin-top:40px; }
+    .footer-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:30px; max-width:1200px; margin:auto; }
+    .footer-col h3, .footer-col h4 { font-family:'Montserrat', sans-serif; margin-bottom:15px; color:var(--white); }
+    .footer-col ul { list-style:none; padding:0; }
+    .footer-col ul li { margin-bottom:10px; }
+    .footer-col ul li a { color:#ccc; text-decoration:none; transition:0.3s; }
+    .footer-col ul li a:hover { color:var(--white); }
+    .footer-col p { margin:8px 0; color:#ccc; }
+    .footer-col i { margin-right:8px; color:var(--secondary-blue); }
+    .socials a { display:inline-block; margin-right:12px; font-size:18px; color:var(--white); transition:0.3s; }
+    .socials a:hover { color:var(--secondary-blue); }
+    .footer-bottom { text-align:center; border-top:1px solid rgba(255,255,255,0.2); margin-top:30px; padding-top:15px; font-size:0.9rem; color:#bbb; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i> NAMA Bilingual School</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="bibliotheque.html">Bibliothèque</a></li>
+        <li><a href="notre ecole.html" class="active-link">Notre école</a></li>
+        <li><a href="nous contacter.html">Nous contacter</a></li>
+        <li><a href="nous decouvrir.html">Nous découvrir</a></li>
+        <li><a href="s'inscrire.html">S'inscrire</a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </div>
+  </header>
+
+    <main class="container">
+      <!-- Introduction -->
+      <section class="alt">
+        <div class="text">
+          <h2>Bienvenue à NAMA BILINGUAL SCHOOL</h2>
+          <p>NBS est un établissement privé à Yaoundé-Nsimalen dédié à la réussite de tous les élèves. Nous transmettons valeurs, dignité et cohérence dans un cadre moderne et sécurisé.</p>
+          <p>Nous impliquons activement personnel, parents et élèves dans un environnement stimulant.</p>
+        </div>
+        <div class="image">
+          <img src="/images/facade avant.jpg" alt="Notre école">
+        </div>
+      </section>
+
+      <!-- Nos valeurs et méthodes pédagogiques -->
+      <section>
+        <div class="text">
+          <h2>Nos valeurs et méthodes pédagogiques</h2>
+          <p>À NAMA Bilingual School, nous privilégions une approche centrée sur l’élève, combinant rigueur académique et développement personnel. Chaque enfant est encouragé à explorer, poser des questions et apprendre par l’expérience.</p>
+          <p>Nous favorisons la discipline, la persévérance, le respect mutuel et la créativité pour former des citoyens responsables et épanouis.</p>
+        </div>
+        <div class="image">
+          <img src="/images/ECOLE/methode.jpg" alt="Méthodes pédagogiques">
+        </div>
+      </section>
+
+      <!-- Maternelle -->
+      <section class="alt">
+        <div class="text">
+          <h2>Maternelle (petite-moyenne-grande section)</h2>
+          <p>Un cadre ludique pour éveiller la créativité, la curiosité et la confiance en soi. Collaboration avec les parents pour un apprentissage épanouissant.</p>
+        </div>
+        <div class="image">
+          <img src="/images/ECOLE/PHOTO-2025-06-15-14-08-14.jpg" alt="Section maternelle">
+        </div>
+      </section>
+
+      <!-- Primaire -->
+      <section>
+        <div class="text">
+          <h2>Primaire (SIL-CM2)</h2>
+          <p>Des enseignants qualifiés et des équipements modernes pour développer compétences linguistiques, scientifiques et culturelles.</p>
+          <h3>Activités scolaires</h3>
+          <ul>
+            <li>Lecture / Écriture</li>
+            <li>Mathématiques appliquées</li>
+            <li>Sciences expérimentales</li>
+            <li>Technologie / Informatique</li>
+          </ul>
+          <h3>Activités périscolaires</h3>
+          <ul>
+            <li>Théâtre / Chant / Danse</li>
+            <li>Sports collectifs</li>
+            <li>Ateliers artistiques</li>
+            <li>Excursions pédagogiques</li>
+          </ul>
+        </div>
+        <div class="image">
+          <img src="/images/ECOLE/PHOTO-2025-06-15-14-08-14 13.jpg" alt="Section primaire">
+        </div>
+      </section>
+
+      <!-- Enseignements supplémentaires -->
+      <section class="alt">
+        <div class="text">
+          <h2>Enseignements supplémentaires</h2>
+          <ul>
+            <li>Intelligence artificielle</li>
+            <li>Langues nationales</li>
+            <li>Initiation au chinois</li>
+          </ul>
+        </div>
+        <div class="image">
+          <img src="/images/cours de chinois.jpg" alt="Cours supplémentaires">
+        </div>
+      </section>
+
+      <!-- Notre équipe -->
+      <section>
+        <div class="text">
+          <h2>Notre équipe</h2>
+          <p>Notre corps enseignant est composé de professionnels qualifiés et passionnés, formés pour accompagner chaque élève dans son parcours scolaire et personnel.</p>
+          <ul>
+            <li>Enseignants expérimentés bilingues</li>
+            <li>Encadreurs spécialisés par niveau</li>
+            <li>Personnel administratif et de soutien attentif aux besoins des élèves</li>
+          </ul>
+          <p>La collaboration entre enseignants, parents et élèves est au cœur de notre réussite éducative.</p>
+        </div>
+        <div class="image">
+          <img src="/images/equipe.jpg" alt="Notre équipe pédagogique">
+        </div>
+      </section>
+
+      <!-- Charte des encadreurs et parents -->
+      <section class="alt">
+        <div class="text">
+          <h2>Charte des encadreurs et parents</h2>
+          <p>Les parents et l’école collaborent pour l’éducation et l’épanouissement des enfants, avec droits et obligations mutuels.</p>
+        </div>
+        <div class="image">
+          <img src="/images/encadreurs.jpg" alt="Collaboration école-parents">
+        </div>
+      </section>
+    </main>
+
+  <footer>
+    <div class="footer-container">
+      <!-- À propos -->
+      <div class="footer-col">
+        <h3><i class="fas fa-school"></i> NAMA Bilingual School</h3>
+        <p>Une école moderne à Yaoundé-Nsimalen, qui allie rigueur académique et développement personnel pour former des citoyens responsables et épanouis.</p>
+      </div>
+      <!-- Liens rapides -->
+      <div class="footer-col">
+        <h4><i class="fas fa-link"></i> Liens rapides</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+          <li><a href="notre ecole.html"><i class="fas fa-landmark"></i> Notre école</a></li>
+          <li><a href="actualites.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+          <li><a href="bibliotheque.html"><i class="fas fa-book"></i> Bibliothèque</a></li>
+          <li><a href="s'inscrire.html"><i class="fas fa-user-plus"></i> S’inscrire</a></li>
+          <li><a href="nous contacter.html"><i class="fas fa-envelope"></i> Nous contacter</a></li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4><i class="fas fa-phone"></i> Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Yaoundé - Nsimalen</p>
+        <p><i class="fas fa-phone-alt"></i> +237 6 XX XX XX XX</p>
+        <p><i class="fas fa-envelope"></i> contact@nama-school.com</p>
+      </div>
+      <!-- Réseaux sociaux -->
+      <div class="footer-col">
+        <h4><i class="fas fa-users"></i> Suivez-nous</h4>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 NAMA Bilingual School - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("nav-links");
+      menu.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

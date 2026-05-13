@@ -1,0 +1,561 @@
+  <!DOCTYPE html>
+  <html lang="fr">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>NAMA Bilingual School</title>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet"
+      />
+      <style>
+        :root {
+          --primary-blue: #5dade2;
+          --secondary-blue: #1470b7;
+          --accent-red: #d90429;
+          --light-bg: #f2f6ff;
+          --white: #ffffff;
+          --text-dark: #333333;
+          --text-light: #666666;
+          --transition: all 0.3s ease;
+          --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Open Sans", sans-serif;
+        }
+
+        body {
+          background: var(--light-bg);
+          color: var(--text-dark);
+          line-height: 1.6;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        .page-container {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+        }
+
+        /* ===== NAVBAR ===== */
+
+
+        .logo {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-weight: 700;
+          font-family: "Montserrat", sans-serif;
+          font-size: 1.4rem;
+          color: var(--white);
+        }
+
+        .logo i {
+          font-size: 1.8rem;
+        }
+
+header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo i {
+  margin-right: 10px;
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: var(--transition);
+  padding: 8px 5px;
+  position: relative;
+}
+
+.nav-links a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  transition: var(--transition);
+}
+
+.nav-links a:hover:after,
+.nav-links a.active-link:after {
+  width: 100%;
+}
+
+.nav-links a.active-link {
+  font-weight: 600;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--primary-blue);
+    flex-direction: column;
+    display: none;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+        .menu-icon {
+          display: none;
+          font-size: 26px;
+          cursor: pointer;
+          color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+          nav ul {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: var(--primary-blue);
+            flex-direction: column;
+            display: none;
+            text-align: center;
+            padding: 15px 0;
+          }
+
+          nav ul.show {
+            display: flex;
+          }
+
+          .menu-icon {
+            display: block;
+          }
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 60px 30px;
+          flex-wrap: wrap;
+          gap: 40px;
+        }
+
+        .hero-text {
+          flex: 1 1 400px;
+        }
+
+        .hero-text h1 {
+          font-size: 2rem;
+          font-family: "Montserrat", sans-serif;
+          margin-bottom: 20px;
+          color: var(--primary-blue);
+        }
+
+        .hero-text p {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: var(--accent-red);
+          display: inline-block;
+          padding: 8px 12px;
+          border-left: 4px solid var(--accent-red);
+          border-radius: 4px;
+          background: var(--white);
+        }
+
+        .hero-image {
+          flex: 1 1 400px;
+          text-align: center;
+        }
+
+        .hero-image img {
+          width: 100%;
+          max-width: 500px;
+          border-radius: 12px;
+          box-shadow: var(--shadow);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+          background-color: var(--primary-blue);
+          color: var(--white);
+          padding: 50px 0 20px;
+        }
+
+        .footer-content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+          margin-bottom: 40px;
+          padding: 0 20px;
+        }
+
+        .footer-section h3 {
+          font-family: "Montserrat", sans-serif;
+          font-size: 1.3rem;
+          margin-bottom: 20px;
+          position: relative;
+          padding-bottom: 10px;
+        }
+
+        .footer-section h3:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 50px;
+          height: 2px;
+          background-color: var(--accent-red);
+        }
+
+        .footer-links {
+          list-style: none;
+        }
+
+        .footer-links li {
+          margin-bottom: 12px;
+        }
+
+        .footer-links a {
+          color: #ccc;
+          text-decoration: none;
+          transition: var(--transition);
+          display: inline-flex;
+          align-items: center;
+        }
+
+        .footer-links a i {
+          margin-right: 8px;
+          font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+          color: var(--white);
+          transform: translateX(5px);
+        }
+
+        .social-links {
+          display: flex;
+          gap: 15px;
+          margin-top: 20px;
+        }
+
+        .social-links a {
+          color: var(--white);
+          font-size: 1.2rem;
+          transition: var(--transition);
+        }
+
+        .social-links a:hover {
+          color: var(--accent-red);
+        }
+
+        .copyright {
+          text-align: center;
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+          padding-top: 15px;
+          font-size: 0.9rem;
+        }
+      </style>
+    </head>
+    <body>
+<header>
+  <div class="container">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="/logo.png" alt="logo de l'ecole" style="height: 90px;">
+        
+        
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="actualites.html" class="active-link">Actualités</a></li>
+        <li><a href="bibliotheque.html">Bibliothèque</a></li>
+        <li><a href="notre ecole.html">Notre école</a></li>
+        <li><a href="nous contacter.html">Nous contacter</a></li>
+        <li><a href="nous decouvrir.html">Nous découvrir</a></li>
+        <li><a href="s'inscrire.html">S'inscrire</a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("nav-links");
+    menu.classList.toggle("show");
+  }
+</script>
+
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero-section">
+          <div class="hero-text">
+            <h1>
+              “NAMA Bilingual School offre un environnement où la réussite se base
+              sur la discipline, le travail, la persévérance et l’éthique.”
+            </h1>
+            <p>Travail, Discipline, Persévérance</p>
+          </div>
+          <div class="hero-image">
+            <img src="/schoolimage.jpeg" alt="Image de l'école" />
+          </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section
+          class="about-section"
+          style="padding: 50px 30px; background: var(--white); text-align: center"
+        >
+          <h2
+            style="
+              color: var(--primary-blue);
+              font-family: 'Montserrat', sans-serif;
+              margin-bottom: 20px;
+            "
+          >
+            À propos de NAMA Bilingual School
+          </h2>
+          <p
+            style="
+              max-width: 800px;
+              margin: 0 auto;
+              font-size: 1.1rem;
+              color: var(--text-light);
+              line-height: 1.8;
+            "
+          >
+            Depuis sa création, NAMA Bilingual School s'engage à offrir un
+            enseignement de qualité, bilingue et structuré, favorisant
+            l'épanouissement académique et personnel de chaque élève. Notre
+            environnement stimulant et bienveillant permet aux élèves de
+            développer leur curiosité, leur créativité et leur esprit critique.
+          </p>
+        </section>
+
+        <!-- ===== VALUES SECTION ===== -->
+        <section
+          class="values-section"
+          style="
+            padding: 50px 30px;
+            background: var(--light-bg);
+            text-align: center;
+          "
+        >
+          <h2
+            style="
+              color: var(--primary-blue);
+              font-family: 'Montserrat', sans-serif;
+              margin-bottom: 30px;
+            "
+          >
+            Nos valeurs
+          </h2>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 30px;
+              max-width: 1000px;
+              margin: 0 auto;
+            "
+          >
+            <div
+              style="
+                background: var(--white);
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: var(--shadow);
+                flex: 1 1 250px;
+              "
+            >
+              <i
+                class="fas fa-book-open"
+                style="
+                  font-size: 2rem;
+                  color: var(--accent-red);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <h3 style="color: var(--primary-blue); margin-bottom: 10px">
+                Excellence académique
+              </h3>
+              <p style="color: var(--text-light); font-size: 1rem">
+                Nous encourageons nos élèves à donner le meilleur d’eux-mêmes et à
+                viser l’excellence dans toutes leurs activités scolaires.
+              </p>
+            </div>
+
+            <div
+              style="
+                background: var(--white);
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: var(--shadow);
+                flex: 1 1 250px;
+              "
+            >
+              <i
+                class="fas fa-hand-holding-heart"
+                style="
+                  font-size: 2rem;
+                  color: var(--accent-red);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <h3 style="color: var(--primary-blue); margin-bottom: 10px">
+                Respect & Discipline
+              </h3>
+              <p style="color: var(--text-light); font-size: 1rem">
+                Nous instaurons un cadre où le respect des autres et la discipline
+                personnelle sont au cœur de la réussite.
+              </p>
+            </div>
+
+            <div
+              style="
+                background: var(--white);
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: var(--shadow);
+                flex: 1 1 250px;
+              "
+            >
+              <i
+                class="fas fa-lightbulb"
+                style="
+                  font-size: 2rem;
+                  color: var(--accent-red);
+                  margin-bottom: 10px;
+                "
+              ></i>
+              <h3 style="color: var(--primary-blue); margin-bottom: 10px">
+                Créativité & Curiosité
+              </h3>
+              <p style="color: var(--text-light); font-size: 1rem">
+                Nous cultivons la créativité et la curiosité intellectuelle de nos
+                élèves à travers des activités stimulantes et variées.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== NEW FOOTER ===== -->
+        <footer>
+          <div class="container">
+            <div class="footer-content">
+              <div class="footer-section">
+                <h3>À propos de nous</h3>
+                <p>
+                  Nama Bilingual School s'engage à offrir une éducation d'excellence qui prépare les élèves à devenir des citoyens du monde accomplis.
+                </p>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+              <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                  <li><a href="index.html"><i class="fas fa-angle-right"></i> Accueil</a></li>
+                  <li><a href="notre ecole.html"><i class="fas fa-angle-right"></i> Notre école</a></li>
+                  <li><a href="nous decouvrir.html"><i class="fas fa-angle-right"></i> Nous découvrir</a></li>
+                  <li><a href="actualites.html"><i class="fas fa-angle-right"></i> Actualités</a></li>
+                  <li><a href="bibliotheque.html"><i class="fas fa-angle-right"></i> Bibliothèque</a></li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h3>Contactez-nous</h3>
+                <ul class="footer-links">
+                  <li><a href="#"><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</a></li>
+                  <li><a href="tel:+237123456789"><i class="fas fa-phone"></i> +237 6 99 00 00 00</a></li>
+                  <li><a href="mailto:info@namabilingualschool.com"><i class="fas fa-envelope"></i> info@namabilingualschool.com</a></li>
+                  <li><a href="nous contacter.html"><i class="fas fa-angle-right"></i> Formulaire de contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="copyright">
+              <p>&copy; 2025 Nama Bilingual School. Tous droits réservés.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <script>
+        function toggleMenu() {
+          const menu = document.getElementById("nav-links");
+          menu.classList.toggle("show");
+        }
+      </script>
+    </body>
+  </html>
